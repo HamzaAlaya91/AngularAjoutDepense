@@ -1,0 +1,33 @@
+<label for="site-search">Search the name depense:</label>
+
+<input type="text" value="Search"
+    [(ngModel)]="filters.keyword"
+    name="keyword"
+    (input)="listDepenses()"
+>
+
+<!-- <div *ngFor="let depense of depenses">
+    <h3>{{depense.depense}}</h3>
+    <p>{{depense.amount | currency: 'EUR'}}</p>
+    <a routerLink="/editdepense/{{depense.id}}">Edit</a>
+</div> -->
+
+
+<table id="t01">
+    <tr>
+      <th>Depense</th>
+      <th>amount</th>
+      <th>Edit</th>
+    </tr>
+    <tr  *ngFor="let depense of depenses">
+      <td>{{depense.depense}}</td>
+      <td>{{depense.amount | currency: 'EUR'}}</td>
+      <td><a routerLink="/editdepense/{{depense.id}}">Edit</a></td>
+    </tr>
+</table>
+
+<div class="relative">
+  <a routerLink="/adddepense">Add Depense</a>
+</div>
+
+

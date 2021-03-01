@@ -1,0 +1,18 @@
+<h3>Add Depense</h3>
+
+<div>
+  <form (ngSubmit)="saveDepense()">
+    <label for="fname">Depense</label>
+    <input type="text" id="fname"  name="depense" [(ngModel)] = "depense.depense" placeholder="Enter depense name">
+
+    <label for="lname">Amount</label>
+    <input type="text" id="lname"  name="amount" [(ngModel)] = "depense.amount" placeholder="Enter Enter  amount">
+
+    <label for="lname">Description</label>
+    <input type="text" id="lname"  name="description" [(ngModel)] = "depense.description" placeholder="Enter description">
+    <div class="example-button-row">
+        <button mat-raised-button type="submit">Add Depense</button>
+        <button mat-raised-button *ngIf="depense.id" (click)="deleteDepense(depense.id)">Delete</button>
+    </div>  
+  </form>
+</div>

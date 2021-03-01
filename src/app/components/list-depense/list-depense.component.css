@@ -1,0 +1,40 @@
+/* table, th, td {
+    border: 1px solid black;
+} */
+
+.example-button-row {
+    display: table-cell;
+    width: 490px;
+}
+
+table {
+    width: 100%;
+ }
+
+ #t01 tr:nth-child(even) {
+    background-color: #eee;
+  }
+  #t01 tr:nth-child(odd) {
+    background-color: #fff;
+  }
+  #t01 th {
+    color: white;
+    background-color: black;
+  }
+
+
+  a:link, a:visited {
+    color: (internal value);
+    text-decoration: underline;
+    cursor: auto;
+  }
+  
+  a:link:active, a:visited:active {
+    color: (internal value);
+  }
+
+  div.relative {
+    position: relative;
+    left: 300px;
+    top: 50px;
+  }
